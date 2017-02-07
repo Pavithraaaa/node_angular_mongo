@@ -4,7 +4,7 @@ RUN mkdir -p /opt/app
 
 WORKDIR /opt/app
 
-ADD node_angular_mongo /opt/app
+ADD $WORKSPACE/. /opt/app
 
 RUN apt-get update && apt-get install -y nginx
 
