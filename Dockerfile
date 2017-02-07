@@ -7,10 +7,7 @@ ADD $WORKSPACE/. /opt/app
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y  software-properties-common && \
-    add-apt-repository ppa:webupd8team/npm -y && \
-    apt-get install -y npm && \
-    apt-get clean
-
+RUN npm install   
 
 EXPOSE 3000
 CMD [ "node", "server.js" ]
