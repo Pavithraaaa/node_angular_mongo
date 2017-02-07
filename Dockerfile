@@ -7,7 +7,7 @@ ADD $WORKSPACE/. /opt/app
 #RUN apt-get update && \
 #    apt-get upgrade -y && \
  #   apt-get install -y  software-properties-common && \
-RUN npm install   
+RUN npm install npm -g   
 
 EXPOSE 3000
 CMD [ "node", "server.js" ]
